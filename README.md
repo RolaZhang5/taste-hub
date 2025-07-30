@@ -42,13 +42,6 @@ This is a Single Page Application (SPA) with front-end and back-end separated in
 - Axios  
 - Vite  
 
----
-
-## Database Schema
-![Taste-Hub Database Schema](./images/tastehub-db.png)
-
----
-
 ## How to Run Locally
 
 > **Start the backend server first, then start the frontend project.**
