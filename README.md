@@ -12,7 +12,7 @@ This is a Single Page Application (SPA) with front-end and back-end separated in
 ![image](https://github.com/RolaZhang5/taste-hub/blob/main/frontend/public/imgs/homepage.png)
 ![image](https://github.com/RolaZhang5/taste-hub/blob/main/frontend/public/imgs/shop.png)
 ![image](https://github.com/RolaZhang5/taste-hub/blob/main/frontend/public/imgs/shopdetail.png)
-![image](https://github.com/RolaZhang5/taste-hub/blob/main/frontend/public/imgs/userinfo.png)
+![image](https://github.com/RolaZhang5/taste-hub/blob/main/frontend/public/imgs/userInfo.png)
 ---
 
 ## Features
