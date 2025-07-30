@@ -87,7 +87,7 @@ function HomePage() {
       <div id="app" >
         <div className="search-bar">
           <div className="city-btn">
-            Hangzhou<i className="el-icon-arrow-down"></i>
+            Sydney<i className="el-icon-arrow-down"></i>
           </div>
           <div className="search-input">
             <SearchOutlined style={{ color: 'grey' }} />
