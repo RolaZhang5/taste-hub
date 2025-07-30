@@ -122,11 +122,11 @@ public class ShopServiceImpl extends ServiceImpl<ShopMapper, Shop> implements IS
                 return queryWithMutex(id);
             }
 
-//        4.4 if successful, query the database by ID 成功 ，根据id在数据库中查询
+//        4.4 if successful, query the database by ID
             shop = getById(id);
 //            Simulate delay in cache rebuilding process
 //            Thread.sleep(200);
-//        5. Return 404 if data doesn't exits 数据库不存在，返回404
+//        5. Return 404 if data doesn't exits
             if (shop == null) {
                 //            Write an empty string to redis
                 stringRedisTemplate.opsForValue().set(key, "", CACHE_NULL_TTL, TimeUnit.MINUTES);

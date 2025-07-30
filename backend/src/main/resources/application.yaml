@@ -2,20 +2,13 @@ server:
   port: 8081
 spring:
   application:
-    name: hmdp
+    name: tasteHub
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-#    url: jdbc:mysql://127.0.0.1:3306/tasteHub?useSSL=false&serverTimezone=UTC
     url: jdbc:mysql://127.0.0.1:3306/testHub?useSSL=false&serverTimezone=UTC
-    username: root
-    password: 1234*ztt
+    username:
+    password:
   redis:
-#    url: rediss://default:AWe_AAIjcDEyZjc0MzRkNDE4YTY0ODU4ODg5YmExMWY4NmU5MzQ4YnAxMA@learning-glider-26559.upstash.io:6379
-#    host: learning-glider-26559.upstash.io
-#    port: 6379
-#    password: AWe_AAIjcDEyZjc0MzRkNDE4YTY0ODU4ODg5YmExMWY4NmU5MzQ4YnAxMA
-#    ssl:
-#      enabled: true
     host: 127.0.0.1
     port: 6379
     lettuce:
