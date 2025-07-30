@@ -50,7 +50,7 @@ function ShopDetail() {
     const formatTime = (v) => {
         const b = new Date(v.beginTime);
         const e = new Date(v.endTime);
-        return `${b.getMonth() + 1}月${b.getDate()}日 ${b.getHours()}:${formatMinutes(b.getMinutes())} ~ ${e.getHours()}:${formatMinutes(e.getMinutes())}`;
+        return `${b.getMonth() + 1}月${b.getDate()}日 ${b.getHours()}:${formatMinutes(b.getMinutes())} ~ ${e.getMonth() + 1}月${e.getDate()}日 ${e.getHours()}:${formatMinutes(e.getMinutes())}`;
     };
 
     const formatMinutes = (m) => (m < 10 ? `0${m}` : m);
@@ -145,17 +145,19 @@ function ShopDetail() {
                         <div className={styles["voucher-left"]}>
                             <div className={styles["voucher-title"]}>{v.title}</div>
                             <div className={styles["voucher-subtitle"]}>{v.subTitle}</div>
-                            <div className={styles["voucher-price"]}>￥{v.payValue}
-                                <span>{(v.payValue * 10) / v.actualValue} off</span></div>
+                            <div className={styles["voucher-price"]}>￥{v.payValue/100}
+                                <span>{100-(v.payValue*100) / v.actualValue} % off</span></div>
                         </div>
                         <div className={styles["voucher-right"]}>
                             {v.type ? (
                                 <div className={styles["seckill-box"]}>
                                     <button
-                                        className={styles[`voucher-btn ${isNotBegin(v) || v.stock < 1 ? 'disable-btn' : ''}`]}
+                                        className={`${styles['voucher-btn']} ${
+                                            (isNotBegin(v) || v.stock < 1) ? styles['disable-btn'] : ''
+                                        }`}
                                         onClick={() => handleSeckill(v)}
                                     >
-                                        Limited Time Sale
+                                        Flash Sale
                                     </button>
                                     <div className={styles["seckill-stock"]}>Remaining {v.stock}</div>
                                     <div className={styles["seckill-time"]}>{formatTime(v)}</div>
